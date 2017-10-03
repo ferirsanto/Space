@@ -1,20 +1,120 @@
 /*This is a CSS comment here // doesn't work for comments*/
-body{
-  background-color: white ;
+
+body {
+  background-color: white;
   color: black;
   font-size: 1em;
   font-family: sans-serif;
   text-align: left;
 }
 
-.text{
-  position: static;
-  width: 350px;
-  height: 350px;
+.text {
+  position: absolute;
   background-color: red;
   color: blue;
   margin: 1rem;
   text-align: center;
   vertical-align: middle;
-  opacity: 0.7;
+}
+
+#text1 {
+  width: 300px;
+  height: 180px;
+  top: 0px;
+  left: 400px;
+}
+
+#text2 {
+  width: 500px;
+  height: 200px;
+  top: 200px;
+  left: 320px;
+}
+
+#text3 {
+  width: 300px;
+  height: 500px;
+  top: 0px;
+  left: 0px;
+}
+
+#text4 {
+  width: 400px;
+  height: 200px;
+  top: 420px;
+  left: 320px;
+}
+
+.image {
+  position: absolute;
+  background-color: blue;
+  color: blue;
+  margin: 1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#image1 {
+  width: 300px;
+  height: 180px;
+  top: 0px;
+  left: 750px;
+}
+
+#image2 {
+  width: 300px;
+  height: 300px;
+  top: 200px;
+  left: 830px;
+}
+
+#image3 {
+  width: 300px;
+  height: 450px;
+  top: 0px;
+  left: 1150px;
+}
+
+#image4 {
+  width: 420px;
+  height: 300px;
+  top: 0px;
+  left: 1470px;
+}
+
+#image5 {
+  width: 270px;
+  height: 300px;
+  top: 330px;
+  left: 1550px;
+}
+
+#image6 {
+  width: 500px;
+  height: 200px;
+  top: 520px;
+  left: 850px;
+}
+
+.video {
+  position: absolute;
+  background-color: yellow;
+  color: yellow;
+  margin: 1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#video1 {
+  width: 500px;
+  height: 300px;
+  top: 700px;
+  left: 300px;
+}
+
+#video2 {
+  width: 500px;
+  height: 300px;
+  top: 750px;
+  left: 850px;
 }
