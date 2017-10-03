@@ -1,0 +1,8 @@
+/*This is a CSS comment here // doesn't work for comments*/
+body{
+  background-color: white ;
+  color: black;
+  font-size: 1em;
+  font-family: sans-serif;
+  text-align: left;
+}
