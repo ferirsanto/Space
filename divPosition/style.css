@@ -1,0 +1,52 @@
+/*This is a CSS comment here // doesn't work for comments*/
+body{
+  background-color: white ;
+  color: black;
+  font-size: 1em;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.div {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  color: white;
+  /*margin: 1rem;*/
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+#div1 {
+  background-color: blue;
+}
+
+#div2 {
+  background-color: green;
+}
+
+#div3 {
+  background-color: red;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 10%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #4CAF50;
+    cursor: pointer;
+}
