@@ -8,13 +8,15 @@ body {
   text-align: left;
 }
 
-.text {
+div {
+  visibility: hidden;
   position: absolute;
-  background-color: red;
-  color: blue;
+  background-color: white;
+  color: black;
   margin: 1rem;
   text-align: center;
   vertical-align: middle;
+  border:1px solid black;
 }
 
 #text1 {
@@ -22,13 +24,15 @@ body {
   height: 180px;
   top: 0px;
   left: 400px;
+  font-size: 11px;
 }
 
 #text2 {
-  width: 500px;
-  height: 200px;
-  top: 200px;
-  left: 320px;
+  width: 300px;
+  height: 450px;
+  top: 0px;
+  left: 1150px;
+  font-size: 15.3px;
 }
 
 #text3 {
@@ -43,15 +47,7 @@ body {
   height: 200px;
   top: 420px;
   left: 320px;
-}
-
-.image {
-  position: absolute;
-  background-color: blue;
-  color: blue;
-  margin: 1rem;
-  text-align: center;
-  vertical-align: middle;
+  font-size: 15.3px;
 }
 
 #image1 {
@@ -69,10 +65,10 @@ body {
 }
 
 #image3 {
-  width: 300px;
-  height: 450px;
-  top: 0px;
-  left: 1150px;
+  width: 500px;
+  height: 200px;
+  top: 200px;
+  left: 320px;
 }
 
 #image4 {
@@ -96,14 +92,7 @@ body {
   left: 850px;
 }
 
-.video {
-  position: absolute;
-  background-color: yellow;
-  color: yellow;
-  margin: 1rem;
-  text-align: center;
-  vertical-align: middle;
-}
+
 
 #video1 {
   width: 500px;
