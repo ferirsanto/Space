@@ -1,4 +1,6 @@
 var divs;
+var colors = ["blue", "red", "green", "black", "gray", "purple", "gold", "yellow", "pink", "silver", "bronze", "brown"];
+
 
 console.log('Script running');
 //Wait till all content is loaded, could be external fonts scripts from other servers etc....
@@ -31,10 +33,20 @@ function scatter() {
         //  console.log(currentDivToPlace);
         randomX = Math.floor(Math.random() * windowWidth);
         randomY = Math.floor(Math.random() * windowHeight);
+        randomWidth = Math.floor(Math.random() * 100);
+        randomHeight = Math.floor(Math.random() * 100);
+
         //  console.log(currentDivToPlace.getBoundingClientRect());
 
         //  currentDivToPlace.className += " hej";
         var divs = document.getElementById(currentDivId);
+        divs.style.backgroundColor = colors[i];
+        var widthString = 90 + randomWidth;
+        var heightString = 120 + randomHeight;
+        divs.originalWidth = widthString;
+        divs.originalHeight = heightString;
+        divs.style.width = widthString + "px";
+        divs.style.height = heightString + "px";
         divs.style.top = randomY + "px";
         divs.style.left = randomX + "px";
         divs.selected = false;
@@ -86,21 +98,18 @@ function mouseMovement() {
         if (e.target.selected === false) {
             divToManipulate.style.position = "static";
             divToManipulate.style.margin = "2rem auto 2rem auto";
-
-            //    divToManipulate.style.top = "15px";
-            //    divToManipulate.style.left = "15px";
-
             divToManipulate.style.width = "90%";
             divToManipulate.style.height = "90vh";
-
+            divToManipulate.className += " selectedDiv";
             divToManipulate.selected = true;
         } else {
             console.log("time to go back!");
             divToManipulate.style.position = "absolute";
-            divToManipulate.style.width = "90px";
-            divToManipulate.style.height = "90px";
+            divToManipulate.style.width = e.target.originalWidth + "px";
+            divToManipulate.style.height = e.target.originalHeight + "px";
             divToManipulate.style.top = e.target.originalY + "px";
             divToManipulate.style.left = e.target.originalX + "px";
+            divToManipulate.classList.remove("selectedDiv");
             divToManipulate.selected = false;
         }
     }

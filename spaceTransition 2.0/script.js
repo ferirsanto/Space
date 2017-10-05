@@ -1,4 +1,6 @@
 var divs;
+var colors = ["blue", "red", "green", "black", "gray", "purple", "gold", "yellow", "pink", "silver", "bronze", "brown"];
+
 
 console.log('Script running');
 //Wait till all content is loaded, could be external fonts scripts from other servers etc....
@@ -35,6 +37,7 @@ function scatter() {
 
         //  currentDivToPlace.className += " hej";
         var divs = document.getElementById(currentDivId);
+        divs.style.backgroundColor = colors[i];
         divs.style.top = randomY + "px";
         divs.style.left = randomX + "px";
         divs.selected = false;
@@ -86,13 +89,9 @@ function mouseMovement() {
         if (e.target.selected === false) {
             divToManipulate.style.position = "static";
             divToManipulate.style.margin = "2rem auto 2rem auto";
-
-            //    divToManipulate.style.top = "15px";
-            //    divToManipulate.style.left = "15px";
-
             divToManipulate.style.width = "90%";
             divToManipulate.style.height = "90vh";
-
+            divToManipulate.className += " selectedDiv";
             divToManipulate.selected = true;
         } else {
             console.log("time to go back!");
@@ -101,6 +100,7 @@ function mouseMovement() {
             divToManipulate.style.height = "90px";
             divToManipulate.style.top = e.target.originalY + "px";
             divToManipulate.style.left = e.target.originalX + "px";
+            divToManipulate.classList.remove("selectedDiv");
             divToManipulate.selected = false;
         }
     }
